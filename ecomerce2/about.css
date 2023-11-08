@@ -1,0 +1,142 @@
+.about_achie{
+    math-style: 3rem;
+}
+.about-achie-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+}
+.achie_right p{
+margin: 1.6rem 0 2rem;
+}
+
+.achie_carts{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+
+.achie_cart{
+    background:var(--color-bg1);
+    text-align: center;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    transition: all 400ms ease;
+}
+.achie_cart:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0,0, 0.3);
+}
+.Acart_icon{
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.achie_cart:nth-child(2) .Acart_icon{
+    background: var(--color-sucess);
+}
+.achie_cart:nth-child(3) .Acart_icon{
+    background: var(--color-primary);
+}
+.achie_left img{
+    height: 100%;
+}
+
+/* team member information  */
+
+.team{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0,0, 0.6);
+}
+.team_container{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 2rem;
+}
+.team_member{
+    background: var(--color-bg2);
+    border: 1px solid transparent;
+    padding: 2rem;
+    transition: all 200ms ease;
+    position: relative;
+    overflow: hidden;
+}
+.team_member:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+.team_member img{
+    filter: saturate(0);
+}
+.team_member:hover img{
+    filter: saturate(1);
+}
+.team_info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+.team_info p{
+    color: var(--color-light);
+}
+.team_social{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0,0, 0.3);
+    transition: all 400ms ease;
+}
+.team_social a{
+    padding: 1rem;
+}
+.team_member:hover .team_social{
+    right: 0;
+}
+
+
+/* media query  */
+@media (max-width:1024px) {
+   .about_achie{
+    margin-top:2rem ;
+   }
+ .about-achie-container{
+    grid-template-columns: 1fr;
+    gap: 4rem;
+ }   
+ .achie_left {
+    width: 80%;
+    margin: 0 auto;
+ }
+ .team_container{
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+ }
+ .team_member{
+    padding: 1rem;
+ }
+}
+
+@media (max-width:600px){
+    .achie_carts{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team_member{
+        padding: 0;
+    }
+    .team_member p{
+        margin-bottom: 1.5rem;
+    }
+
+}
